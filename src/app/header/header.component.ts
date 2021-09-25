@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { AuthorService } from '../review.service';
+import { ReviewService } from '../review.service';
 
 @Component({
   selector: 'app-header',

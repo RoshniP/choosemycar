@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthorService } from '../review.service';
-import { AuthorModel } from '../authors/authors.model';
+import { ReviewService } from '../review.service';
+import { ReviewModel } from '../reviews/reviews.model';
 
 @Component({
-  selector: 'app-singleauthor',
-  templateUrl: './singleauthor.component.html',
-  styleUrls: ['./singleauthor.component.css']
+  selector: 'app-singlereview',
+  templateUrl: './singlereview.component.html',
+  styleUrls: ['./singlereview.component.css']
 })
-export class SingleauthorComponent implements OnInit {
+export class SinglereviewComponent implements OnInit {
 
-  authorItem = new AuthorModel("","",[],"","");
+  reviewItem = new ReviewModel("","",[],"","");
 
-  constructor(private authorService: AuthorService, private _router: Router) { }
+  constructor(private reviewService: ReviewService, private _router: Router) { }
 
   ngOnInit(): void {
-    let authorId = localStorage.getItem("singleAuthorId");
-    this.authorService.getAuthor(authorId)
+    let reviewId = localStorage.getItem("singleReviewId");
+    this.reviewService.getReview(reviewId)
     .subscribe((data)=>{
-      this.authorItem = JSON.parse(JSON.stringify(data)); //stringify = convert from object to JSON ; parse = convert from JSON to object
-      console.log(this.authorItem);
+      this.reviewItem = JSON.parse(JSON.stringify(data)); //stringify = convert from object to JSON ; parse = convert from JSON to object
+      console.log(this.reviewItem);
     })
   }
 

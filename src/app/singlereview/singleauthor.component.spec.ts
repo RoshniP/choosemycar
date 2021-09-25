@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SingleauthorComponent } from './singleauthor.component';
+import { SinglereviewComponent } from './singlereview.component';
 
-describe('SingleauthorComponent', () => {
-  let component: SingleauthorComponent;
-  let fixture: ComponentFixture<SingleauthorComponent>;
+describe('SinglereviewComponent', () => {
+  let component: SinglereviewComponent;
+  let fixture: ComponentFixture<SinglereviewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SingleauthorComponent ]
+      declarations: [ SinglereviewComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SingleauthorComponent);
+    fixture = TestBed.createComponent(SinglereviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

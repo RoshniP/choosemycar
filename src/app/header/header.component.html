@@ -10,13 +10,13 @@
           <a class="nav-link" routerLink="/cars"  style="color: white;">Cars</a>
         </li>
         <!-- <li class="nav-item">
-            <a class="nav-link" routerLink="/authors" style="color: white;">Reviews</a>
+            <a class="nav-link" routerLink="/reviews" style="color: white;">Reviews</a>
         </li> -->
         <li class="nav-item">
             <a class="nav-link" routerLink="/newcar" *ngIf="_auth.loggedIn()" style="color: white;">Add Car</a>
         </li>
         <!-- <li class="nav-item">
-            <a class="nav-link" routerLink="/newauthor" *ngIf="_auth.loggedIn()" style="color: white;">Add Review</a>
+            <a class="nav-link" routerLink="/newreview" *ngIf="_auth.loggedIn()" style="color: white;">Add Review</a>
         </li> -->
         <li class="nav-item">
             <a class="nav-link" routerLink="/signup" *ngIf="!_auth.loggedIn()" style="color: white;">Sign Up</a>

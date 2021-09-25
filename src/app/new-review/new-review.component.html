@@ -1,13 +1,13 @@
-<form #newauthor="ngForm" (ngSubmit) = "AddAuthor()">
-    <div class="container addbook" style="background-color: rgba(0, 0, 0, 0.884);">
-      <h3 class="addbook-heading">Add A Review</h3>
-      <div class="row addbook-form">
+<form #newreview="ngForm" (ngSubmit) = "AddReview()">
+    <div class="container addcar" style="background-color: rgba(0, 0, 0, 0.884);">
+      <h3 class="addcar-heading">Add A Review</h3>
+      <div class="row addcar-form">
         <div class="col-md-2">
           <label>Name</label>
         </div>
         <div class="col-md-10">
           <div class="form-group">
-            <input type="text" name="name" [(ngModel)]= "authorItem.name" id="title" class="form-control"  placeholder="Your name*"  style=" color: blanchedalmond;"required>
+            <input type="text" name="name" [(ngModel)]= "reviewItem.name" id="title" class="form-control"  placeholder="Your name*"  style=" color: blanchedalmond;"required>
             <span id="error1" style="color: red;font-size: 13px;"></span>
           </div>
         </div>
@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-10">
           <div class="form-group">
-            <input type="text" name="description" [(ngModel)]= "authorItem.description"  id="name" class="form-control" placeholder="Description of Author* (eg: American author)"  style=" color: blanchedalmond;" required>
+            <input type="text" name="description" [(ngModel)]= "reviewItem.description"  id="name" class="form-control" placeholder="Description of Review* (eg: American review)"  style=" color: blanchedalmond;" required>
             <span id="error2" style="color: red;font-size: 13px;"></span>
           </div>
         </div> -->
@@ -25,7 +25,7 @@
         </div>
         <div class="col-md-10">
             <div class="form-group">
-                <!-- <select class="selectpicker" name="genre" [(ngModel)]= "bookItem.genre" data-width="100%" multiple data-live-search="true" title="Click here to select the genres*" style=" color: rgb(17, 15, 11);" required >
+                <!-- <select class="selectpicker" name="genre" [(ngModel)]= "carItem.genre" data-width="100%" multiple data-live-search="true" title="Click here to select the genres*" style=" color: rgb(17, 15, 11);" required >
                     <option value="Fiction" >Fiction</option>
                     <option value="Mystery" >Mystery</option>
                     <option value="Thriller">Thriller</option>
@@ -45,7 +45,7 @@
                     <option value="Science">Science</option>
                     <option value="Novel">Novel</option>
                 </select> -->
-                <input type="text" name="genre" [(ngModel)]= "authorItem.genre"  class="form-control" placeholder="Enter the genres*"  style=" color: blanchedalmond;" required>
+                <input type="text" name="genre" [(ngModel)]= "reviewItem.genre"  class="form-control" placeholder="Enter the genres*"  style=" color: blanchedalmond;" required>
                 <span id="error3" style="color: red;font-size: 13px;"></span>
             </div>
         </div>
@@ -54,15 +54,15 @@
           <label>About</label>
         </div>
         <div class="col-md-10">
-           <textarea class="form-control z-depth-1"  name="about" [(ngModel)]= "authorItem.about" style=" color: blanchedalmond;" id="exampleFormControlTextarea6" rows="3" placeholder="About the author*" required></textarea>
+           <textarea class="form-control z-depth-1"  name="about" [(ngModel)]= "reviewItem.about" style=" color: blanchedalmond;" id="exampleFormControlTextarea6" rows="3" placeholder="About the review*" required></textarea>
         </div>
         
-        <label>Choose an image of author </label> <br>
-        <textarea class="form-control z-depth-1"  name="image" [(ngModel)]= "authorItem.image" style=" color: blanchedalmond;" id="exampleFormControlTextarea6" rows="2" placeholder="Copy and paste the image address here*" required></textarea>
+        <label>Choose an image of review </label> <br>
+        <textarea class="form-control z-depth-1"  name="image" [(ngModel)]= "reviewItem.image" style=" color: blanchedalmond;" id="exampleFormControlTextarea6" rows="2" placeholder="Copy and paste the image address here*" required></textarea>
           
-          <!-- <img id="preview" src="/images/bookplaceholder.jpg" onclick="show()" style="cursor: pointer;"> -->
+          <!-- <img id="preview" src="/images/carplaceholder.jpg" onclick="show()" style="cursor: pointer;"> -->
          
-          <input type="submit" [disabled]="newauthor.invalid" class="btnnewbook" value="Add">
+          <input type="submit" [disabled]="newreview.invalid" class="btnnewcar" value="Add">
         </div>   
    
     </div>

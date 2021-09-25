@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BookService } from '../car.service';
-import { BookModel } from '../books/books.model';
+import { CarService } from '../car.service';
+import { CarModel } from '../cars/cars.model';
 
 @Component({
-  selector: 'app-singlebook',
-  templateUrl: './singlebook.component.html',
-  styleUrls: ['./singlebook.component.css']
+  selector: 'app-singlecar',
+  templateUrl: './singlecar.component.html',
+  styleUrls: ['./singlecar.component.css']
 })
-export class SinglebookComponent implements OnInit {
+export class SinglecarComponent implements OnInit {
 
-  bookItem = new BookModel("","",[],"","");
+  carItem = new CarModel("","",[],"","");
 
-  constructor(private bookService: BookService, private _router: Router) { }
+  constructor(private carService: CarService, private _router: Router) { }
 
   ngOnInit(): void { 
-    let bookId = localStorage.getItem("singleBookId");
-    this.bookService.getBook(bookId)
+    let carId = localStorage.getItem("singleCarId");
+    this.carService.getCar(carId)
     .subscribe((data)=>{
-      this.bookItem = JSON.parse(JSON.stringify(data)); //stringify = convert from object to JSON ; parse = convert from JSON to object
-      console.log(this.bookItem);
+      this.carItem = JSON.parse(JSON.stringify(data)); //stringify = convert from object to JSON ; parse = convert from JSON to object
+      console.log(this.carItem);
     })
   }
 

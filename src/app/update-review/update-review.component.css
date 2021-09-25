@@ -18,7 +18,7 @@ label{
       border-bottom:2px solid rgb(211, 130, 64);
       }
 
-      .addbook{
+      .addcar{
         margin-top: 2%;
         padding: 3%;
         border-style: solid;
@@ -29,11 +29,11 @@ label{
         height: 60%;
         }
 
-        .addbook .addbook-form{
+        .addcar .addcar-form{
         padding: 8%;
         margin-top: 10%;
         }
-        .btnnewbook{
+        .btnnewcar{
         border: none;
         font-size: 23px;
         font-weight: 800;
@@ -46,11 +46,11 @@ label{
         color: rgba(0, 0, 0, 0.747);
         margin-top: 2%;
         }
-        .btnnewbook:hover{
+        .btnnewcar:hover{
             background: -webkit-linear-gradient(right,rgb(245, 160, 90),rgb(245, 160, 90));
         }
        
-        .addbook-heading{
+        .addcar-heading{
         text-align: center;
         margin-top: 2%;
         margin-bottom: -15%;
@@ -94,7 +94,7 @@ label{
     margin-top: 5%;
     cursor: pointer;
   }
-  .btnnewbook[disabled]{
+  .btnnewcar[disabled]{
     background: -webkit-linear-gradient(right,rgb(184, 178, 178),rgb(184, 178, 178));
     color: rgb(122, 117, 117);
   }

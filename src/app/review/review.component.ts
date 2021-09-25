@@ -1,41 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { AuthorService } from '../review.service';
-import { AuthorModel } from './review.model';
+import { ReviewService } from '../review.service';
+import { ReviewModel } from './review.model';
  
 @Component({
-  selector: 'app-authors',
-  templateUrl: './authors.component.html',
-  styleUrls: ['./authors.component.css']
+  selector: 'app-reviews',
+  templateUrl: './reviews.component.html',
+  styleUrls: ['./reviews.component.css']
 })
-export class AuthorsComponent implements OnInit {
+export class ReviewsComponent implements OnInit {
 
-  authors : AuthorModel[] = []; 
+  reviews : ReviewModel[] = []; 
 
-  constructor(private authorService : AuthorService ,public _auth: AuthService, private _router: Router) { }
+  constructor(private reviewService : ReviewService ,public _auth: AuthService, private _router: Router) { }
 
   ngOnInit(): void {
-    this.authorService.getAuthors()
+    this.reviewService.getReviews()
     .subscribe((data)=>{
-      this.authors = JSON.parse(JSON.stringify(data));
+      this.reviews = JSON.parse(JSON.stringify(data));
     })
   }
 
-  singleAuthor(author: any){
-    localStorage.setItem("singleAuthorId" , author._id.toString());
-    this._router.navigate(['/singleauthor']);
+  singleReview(review: any){
+    localStorage.setItem("singleReviewId" , review._id.toString());
+    this._router.navigate(['/singlereview']);
   }
 
-  updateAuthor(author: any){
-    localStorage.setItem("updateAuthorId" , author._id.toString());
-    this._router.navigate(['/updateauthor']);
+  updateReview(review: any){
+    localStorage.setItem("updateReviewId" , review._id.toString());
+    this._router.navigate(['/updatereview']);
   }
 
-  deleteAuthor(author: any){
-    this.authorService.deleteAuthor(author._id)
+  deleteReview(review: any){
+    this.reviewService.deleteReview(review._id)
     .subscribe((data)=>{
-      this.authors = this.authors.filter(a => a !== author);  //deletes product from list (line 14) and shows the list of products that is != the deleted product
+      this.reviews = this.reviews.filter(a => a !== review);  //deletes product from list (line 14) and shows the list of products that is != the deleted product
     })
   }
 }

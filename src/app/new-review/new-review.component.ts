@@ -1,26 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthorService } from '../review.service';
-import { AuthorModel } from '../authors/authors.model';
+import { ReviewService } from '../review.service';
+import { ReviewModel } from '../reviews/reviews.model';
 
 @Component({
-  selector: 'app-new-author',
-  templateUrl: './new-author.component.html',
-  styleUrls: ['./new-author.component.css']
+  selector: 'app-new-review',
+  templateUrl: './new-review.component.html',
+  styleUrls: ['./new-review.component.css']
 })
-export class NewAuthorComponent implements OnInit {
+export class NewReviewComponent implements OnInit {
 
-  authorItem = new AuthorModel("","",[],"","");
+  reviewItem = new ReviewModel("","",[],"","");
 
-  constructor(private authorService: AuthorService, private _router: Router) { }
+  constructor(private reviewService: ReviewService, private _router: Router) { }
 
   ngOnInit(): void {
   }
   
-  AddAuthor(){
-    this.authorService.newAuthor(this.authorItem);
+  AddReview(){
+    this.reviewService.newReview(this.reviewItem);
     console.log("added");
     alert("success");
-    this._router.navigate(['/authors']); 
+    this._router.navigate(['/reviews']); 
   }
 }

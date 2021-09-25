@@ -1,41 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { BookService } from '../car.service';
-import { BookModel } from './books.model';
+import { CarService } from '../car.service';
+import { CarModel } from './cars.model';
 
 @Component({ 
-  selector: 'app-books',
-  templateUrl: './books.component.html',
-  styleUrls: ['./books.component.css']
+  selector: 'app-cars',
+  templateUrl: './cars.component.html',
+  styleUrls: ['./cars.component.css']
 })
-export class BooksComponent implements OnInit {
+export class CarsComponent implements OnInit {
 
-  books : BookModel[] = [];
+  cars : CarModel[] = [];
 
-  constructor(private bookService: BookService ,public _auth: AuthService, private _router: Router) { }
+  constructor(private carService: CarService ,public _auth: AuthService, private _router: Router) { }
 
   ngOnInit(): void {
-    this.bookService.getBooks() 
+    this.carService.getCars() 
     .subscribe((data)=>{
-      this.books = JSON.parse(JSON.stringify(data));
+      this.cars = JSON.parse(JSON.stringify(data));
     })
   }
   
-  singleBook(book: any){
-    localStorage.setItem("singleBookId" , book._id.toString());
-    this._router.navigate(['/singlebook']);
+  singleCar(car: any){
+    localStorage.setItem("singleCarId" , car._id.toString());
+    this._router.navigate(['/singlecar']);
   }
 
-  updateBook(book:any){
-    localStorage.setItem("updateBookId" , book._id.toString());
-    this._router.navigate(['/updatebook']);
+  updateCar(car:any){
+    localStorage.setItem("updateCarId" , car._id.toString());
+    this._router.navigate(['/updatecar']);
   }
 
-  deleteBook(book: any){
-    this.bookService.deleteBook(book._id)
+  deleteCar(car: any){
+    this.carService.deleteCar(car._id)
     .subscribe((data)=>{
-      this.books = this.books.filter(b => b !== book);  //deletes product from list (line 14) and shows the list of products that is != the deleted product
+      this.cars = this.cars.filter(b => b !== car);  //deletes product from list (line 14) and shows the list of products that is != the deleted product
     })
   }
 }

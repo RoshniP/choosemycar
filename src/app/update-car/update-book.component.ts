@@ -1,31 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BookService } from '../car.service';
-import { BookModel } from '../books/books.model';
+import { CarService } from '../car.service';
+import { CarModel } from '../cars/cars.model';
 
 @Component({
-  selector: 'app-update-book',
-  templateUrl: './update-book.component.html',
-  styleUrls: ['./update-book.component.css']
+  selector: 'app-update-car',
+  templateUrl: './update-car.component.html',
+  styleUrls: ['./update-car.component.css']
 })
-export class UpdateBookComponent implements OnInit {
+export class UpdateCarComponent implements OnInit {
 
-  bookItem = new BookModel("","",[],"","");
+  carItem = new CarModel("","",[],"","");
 
-  constructor(private bookService: BookService, private _router: Router) { } 
+  constructor(private carService: CarService, private _router: Router) { } 
 
   ngOnInit(): void {
-    let bookId = localStorage.getItem("updateBookId");
-    this.bookService.getBook(bookId)
+    let carId = localStorage.getItem("updateCarId");
+    this.carService.getCar(carId)
     .subscribe((data)=>{
-      this.bookItem = JSON.parse(JSON.stringify(data)); //stringify = convert from object to JSON ; parse = convert from JSON to object
-      console.log(this.bookItem);
+      this.carItem = JSON.parse(JSON.stringify(data)); //stringify = convert from object to JSON ; parse = convert from JSON to object
+      console.log(this.carItem);
     })
   }
 
-  updateBook(){
-    this.bookService.updateBook(this.bookItem);
+  updateCar(){
+    this.carService.updateCar(this.carItem);
     alert("success");
-    this._router.navigate(['/books']);
+    this._router.navigate(['/cars']);
   }
 }

@@ -1,26 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BookService } from '../car.service';
-import { BookModel } from '../books/books.model';
+import { CarService } from '../car.service';
+import { CarModel } from '../cars/cars.model';
 declare var $: any;
 
 @Component({
-  selector: 'app-new-book',
-  templateUrl: './new-book.component.html',
-  styleUrls: ['./new-book.component.css'] 
+  selector: 'app-new-car',
+  templateUrl: './new-car.component.html',
+  styleUrls: ['./new-car.component.css'] 
 })
-export class NewBookComponent implements OnInit {
+export class NewCarComponent implements OnInit {
 
-  constructor(private bookService: BookService , private _router: Router) { }
+  constructor(private carService: CarService , private _router: Router) { }
 
-  bookItem = new BookModel("","",[],"","");
+  carItem = new CarModel("","",[],"","");
 
   ngOnInit(): void {$('.select-picker').selectpicker();}
   
-  AddBook(){
-    this.bookService.newBook(this.bookItem);
+  AddCar(){
+    this.carService.newCar(this.carItem);
     console.log("added");
     alert("success");
-    this._router.navigate(['/books']); 
+    this._router.navigate(['/cars']); 
   }
 }

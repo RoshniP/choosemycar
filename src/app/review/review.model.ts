@@ -1,4 +1,4 @@
-export class AuthorModel{ 
+export class ReviewModel{ 
     constructor(
         public name : String,
         public description : String,

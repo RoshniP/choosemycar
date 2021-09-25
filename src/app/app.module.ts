@@ -6,37 +6,37 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { BooksComponent } from './books/books.component';
-import { AuthorsComponent } from './authors/authors.component';
+import { CarsComponent } from './cars/cars.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http';
-import { UpdateBookComponent } from './update-car/update-book.component';
-import { UpdateAuthorComponent } from './update-review/update-review.component';
-import { NewBookComponent } from './new-car/new-car.component';
-import { NewAuthorComponent } from './new-review/new-review.component';
-import { SinglebookComponent } from './singlecar/singlebook.component';
-import { SingleauthorComponent } from './singlereview/singleauthor.component';
+import { UpdateCarComponent } from './update-car/update-car.component';
+import { UpdateReviewComponent } from './update-review/update-review.component';
+import { NewCarComponent } from './new-car/new-car.component';
+import { NewReviewComponent } from './new-review/new-review.component';
+import { SinglecarComponent } from './singlecar/singlecar.component';
+import { SinglereviewComponent } from './singlereview/singlereview.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './auth.service';
-import { BookService } from './car.service';
-import { AuthorService } from './review.service';
+import { CarService } from './car.service';
+import { ReviewService } from './review.service';
 import { TokenInterceptorService } from './token-interceptor.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BooksComponent,
-    AuthorsComponent,
+    CarsComponent,
+    ReviewsComponent,
     HomeComponent,
-    UpdateBookComponent,
-    UpdateAuthorComponent,
-    NewBookComponent,
-    NewAuthorComponent,
-    SinglebookComponent,
-    SingleauthorComponent,
+    UpdateCarComponent,
+    UpdateReviewComponent,
+    NewCarComponent,
+    NewReviewComponent,
+    SinglecarComponent,
+    SinglereviewComponent,
     SignupComponent,
     LoginComponent,
     FooterComponent
@@ -48,7 +48,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [BookService, AuthorService, AuthService,
+  providers: [CarService, ReviewService, AuthService,
              {
               provide : HTTP_INTERCEPTORS,
               useClass : TokenInterceptorService,

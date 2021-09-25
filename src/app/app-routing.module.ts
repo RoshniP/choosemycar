@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
-import { AuthorsComponent } from './authors/authors.component';
-import { BooksComponent } from './books/books.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { CarsComponent } from './cars/cars.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { NewAuthorComponent } from './new-review/new-review.component';
-import { NewBookComponent } from './new-car/new-car.component';
+import { NewReviewComponent } from './new-review/new-review.component';
+import { NewCarComponent } from './new-car/new-car.component';
 import { SignupComponent } from './signup/signup.component';
-import { SingleauthorComponent } from './singlereview/singleauthor.component';
-import { SinglebookComponent } from './singlecar/singlebook.component';
-import { UpdateAuthorComponent } from './update-review/update-review.component';
-import { UpdateBookComponent } from './update-car/update-book.component'
+import { SinglereviewComponent } from './singlereview/singlereview.component';
+import { SinglecarComponent } from './singlecar/singlecar.component';
+import { UpdateReviewComponent } from './update-review/update-review.component';
+import { UpdateCarComponent } from './update-car/update-car.component'
 
 
 const routes: Routes = [
@@ -25,30 +25,30 @@ const routes: Routes = [
   component: LoginComponent},
 
   {path: 'cars' ,
-  component: BooksComponent},
+  component: CarsComponent},
 
   {path: 'newcar' , 
-  component: NewBookComponent},
+  component: NewCarComponent},
 
   {path: 'singlecar',
-  component: SinglebookComponent},
+  component: SinglecarComponent},
 
-  {path: 'updatebook',
-  component: UpdateBookComponent},
+  {path: 'updatecar',
+  component: UpdateCarComponent},
   
-  {path: 'authors' , 
-  component: AuthorsComponent},
+  {path: 'reviews' , 
+  component: ReviewsComponent},
 
-  {path: 'newauthor' , 
+  {path: 'newreview' , 
   canActivate : [AuthGuard],
-  component: NewAuthorComponent},
+  component: NewReviewComponent},
 
-  {path: 'updateauthor',
+  {path: 'updatereview',
   canActivate : [AuthGuard],
-  component: UpdateAuthorComponent},
+  component: UpdateReviewComponent},
 
-  {path: 'singleauthor',
-  component: SingleauthorComponent}
+  {path: 'singlereview',
+  component: SinglereviewComponent}
 
 ];
 

@@ -9,12 +9,12 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   addUser(user:any){
-    return this.http.post("https://book-server1.herokuapp.com/adduser", {"user" : user})
+    return this.http.post("https://car-server1.herokuapp.com/adduser", {"user" : user})
     .subscribe(data => {console.log(data)})
   }
 
   loginUser(user: any){
-    return this.http.post<any>("https://book-server1.herokuapp.com/login" , user) 
+    return this.http.post<any>("https://car-server1.herokuapp.com/login" , user) 
   }
 
   getToken(){    //function to get token value from client side

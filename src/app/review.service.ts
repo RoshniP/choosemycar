@@ -4,29 +4,29 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthorService {
+export class ReviewService {
 
   constructor(private http: HttpClient) { }
 
-  getAuthors(){ 
-    return this.http.get("https://book-server1.herokuapp.com/authors");
+  getReviews(){ 
+    return this.http.get("https://car-server1.herokuapp.com/reviews");
   }
  
-  getAuthor(id: any){         //for edit author page
-    return this.http.get("https://book-server1.herokuapp.com/author/"+id);
+  getReview(id: any){         //for edit review page
+    return this.http.get("https://car-server1.herokuapp.com/review/"+id);
   }
   
-  newAuthor(item: any){
-    return this.http.post("https://book-server1.herokuapp.com/insertauthor", {"author" : item})
+  newReview(item: any){
+    return this.http.post("https://car-server1.herokuapp.com/insertreview", {"review" : item})
     .subscribe(data => {console.log(data)})
   }
 
-  updateAuthor(author: any){
-    return this.http.put("https://book-server1.herokuapp.com/updateauthor", author)
+  updateReview(review: any){
+    return this.http.put("https://car-server1.herokuapp.com/updatereview", review)
     .subscribe((data)=>{console.log(data)})
   }
 
-  deleteAuthor(id: any){
-    return this.http.delete("https://book-server1.herokuapp.com/removeauthor/"+id);
+  deleteReview(id: any){
+    return this.http.delete("https://car-server1.herokuapp.com/removereview/"+id);
   }
 }
