@@ -9,25 +9,25 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
   getBooks(){
-    return this.http.get("http://localhost:3000/books");
+    return this.http.get("https://book-server1.herokuapp.com/books");
   }
   
   getBook(id:any){        //for edit book page
-    return this.http.get("http://localhost:3000/book/"+id)
+    return this.http.get("https://book-server1.herokuapp.com/book/"+id)
   }
 
   newBook(item: any){
-    return this.http.post("http://localhost:3000/insertbook", {"book" : item})
+    return this.http.post("https://book-server1.herokuapp.com/insertbook", {"book" : item})
     .subscribe(data => {console.log(data)})
   }
 
   updateBook(book: any){
-    return this.http.put("http://localhost:3000/updatebook", book)
+    return this.http.put("https://book-server1.herokuapp.com/updatebook", book)
     .subscribe((data)=>{console.log(data)})
   }
 
   deleteBook(id: any){
-    return this.http.delete("http://localhost:3000/removebook/"+id);
+    return this.http.delete("https://book-server1.herokuapp.com/removebook/"+id);
   }
 }
  
