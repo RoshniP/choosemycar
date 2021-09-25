@@ -1,5 +1,5 @@
 {
-  "name": "cars-angular",
+  "name": "car-reviews-angular",
   "version": "0.0.0",
   "scripts": {
     "heroku-postbuild": "ng build --prod",
