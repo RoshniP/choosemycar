@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { AuthorService } from '../author.service';
-import { AuthorModel } from './authors.model';
+import { AuthorService } from '../review.service';
+import { AuthorModel } from './review.model';
  
 @Component({
   selector: 'app-authors',

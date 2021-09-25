@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UpdateAuthorComponent } from './update-author.component';
+import { UpdateAuthorComponent } from './update-review.component';
 
 describe('UpdateAuthorComponent', () => {
   let component: UpdateAuthorComponent;

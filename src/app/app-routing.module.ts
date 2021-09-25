@@ -5,13 +5,13 @@ import { AuthorsComponent } from './authors/authors.component';
 import { BooksComponent } from './books/books.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { NewAuthorComponent } from './new-author/new-author.component';
-import { NewBookComponent } from './new-book/new-book.component';
+import { NewAuthorComponent } from './new-review/new-review.component';
+import { NewBookComponent } from './new-car/new-car.component';
 import { SignupComponent } from './signup/signup.component';
-import { SingleauthorComponent } from './singleauthor/singleauthor.component';
-import { SinglebookComponent } from './singlebook/singlebook.component';
-import { UpdateAuthorComponent } from './update-author/update-author.component';
-import { UpdateBookComponent } from './update-book/update-book.component'
+import { SingleauthorComponent } from './singlereview/singleauthor.component';
+import { SinglebookComponent } from './singlecar/singlebook.component';
+import { UpdateAuthorComponent } from './update-review/update-review.component';
+import { UpdateBookComponent } from './update-car/update-book.component'
 
 
 const routes: Routes = [

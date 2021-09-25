@@ -10,18 +10,18 @@ import { BooksComponent } from './books/books.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule , HTTP_INTERCEPTORS} from '@angular/common/http';
-import { UpdateBookComponent } from './update-book/update-book.component';
-import { UpdateAuthorComponent } from './update-author/update-author.component';
-import { NewBookComponent } from './new-book/new-book.component';
-import { NewAuthorComponent } from './new-author/new-author.component';
-import { SinglebookComponent } from './singlebook/singlebook.component';
-import { SingleauthorComponent } from './singleauthor/singleauthor.component';
+import { UpdateBookComponent } from './update-car/update-book.component';
+import { UpdateAuthorComponent } from './update-review/update-review.component';
+import { NewBookComponent } from './new-car/new-car.component';
+import { NewAuthorComponent } from './new-review/new-review.component';
+import { SinglebookComponent } from './singlecar/singlebook.component';
+import { SingleauthorComponent } from './singlereview/singleauthor.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './auth.service';
-import { BookService } from './book.service';
-import { AuthorService } from './author.service';
+import { BookService } from './car.service';
+import { AuthorService } from './review.service';
 import { TokenInterceptorService } from './token-interceptor.service';
 
 @NgModule({

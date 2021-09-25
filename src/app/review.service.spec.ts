@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AuthorService } from './author.service';
+import { AuthorService } from './review.service';
 
 describe('AuthorService', () => {
   let service: AuthorService;
